@@ -1,14 +1,34 @@
-<!DOCTYPE html>
-<html>
+<% provide(:title, 'home') %>
+
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-  <title>Empathrive</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <title><% full_title(yield(:title)) %></title>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= stylesheet_link_tag    "bootstrap", media: "all" %>
+  <%= stylesheet_link_tag    "font-awesome", media: "all" %>
+
   <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "modernizr" %>
+  <%= javascript_include_tag "spin" %>
+  <%= javascript_include_tag "jquery-ui" %>
+  <%= javascript_include_tag "bootstrap" %>
   <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
+  <!--  #todo add robots, sitemap, etc  -->
 </head>
-<body>
 
-<%= yield %>
+<body id="home" data-spy="scroll" data-target="#navbar" data-offset="50">
+  <div id="wrapper">
+    <%= render "layouts/header" %>
+    <%= render "layouts/signup" %>
+    <%= render "layouts/contact" %>
 
+    <%= yield %>
+
+    <%= render "layouts/footer" %>
+    <%= javascript_include_tag "google_analytics" %>
+  </div>
 </body>
 </html>

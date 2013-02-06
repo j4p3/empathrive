@@ -1,2 +1,56 @@
-<h1>StaticPages#home</h1>
-<p>Find me in app/views/static_pages/home.html.erb</p>
+<div id="main">
+  <div id="cover-photo" class="hero-unit">
+    <div class="container">
+      <div id="intro-text" class="row-fluid">
+        <div class="span5 offset1 pagination-right">
+          <h1>Zinstry</h1>
+          <h2>Share Your Experience</h2>
+        </div>
+        <div class="span5">
+          <p>Everyone Has a Unique Life Story</p>
+          <p>Share Your Own Experiences</p>
+          <p>Learn From Others</p>
+          <form method="" action="">
+            <div id="signup-top">
+                <input type="email" name="user-email" placeholder="Enter Your Email Here..."></input>
+                <input class="btn btn-primary btn-large" type="submit" value="Join Us...It's Free!" data-loading-text="Submitting..."></input>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>  
+  </div>
+  
+  <div  id="what-is-zinstry" class="container">
+    <div class="hero-unit">
+      <h2>What is Zinstry?</h2>
+      <div class="row-fluid">
+        <img src="http://placehold.it/500x250">
+        <p class="span5 pull-right">
+          <small></small>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="how-does-it-work">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div id="myCarousel" class="carousel slide">
+        <div class="carousel-inner">
+          <%= render "layouts/carousel_item" %>
+        </div>
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>  
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div  id="our-community"  class="row-fluid">
+      <h2>Our Community</h2>
+        <!-- #todo - make one of these that acutally works. -->
+        <%= community_column(yield(5)) %>
+      </div>
+    </div>
+</div>
