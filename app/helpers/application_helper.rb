@@ -8,8 +8,5 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
-
-	def community_column(columns)
-		columns.times { "layouts/community_column"}
-	end
+	
 end
