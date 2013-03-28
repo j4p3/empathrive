@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </a>
-      <a class="brand" href="#">Empathrive</a>
+      <%= link_to "Empathrive", root_path, class: "brand" %>
       <a class="brand" id="facebook" href=""><i class="icon-facebook icon-large"></i></a>
       <a class="brand" id="twitter" href=""><i class="icon-twitter icon-large"></i></a>
       <a class="brand" id="googleplus" href=""><i class="icon-google-plus icon-large"></i></a>
@@ -17,7 +17,11 @@
           <li><a href="#how-does-it-work"><i class="icon-cogs"></i>How It Works</a></li>
           <li><a href="#our-community"><i class="icon-user"></i>Our Community</a></li>
           <li><a href="#"><i class="icon-pencil"></i>Blog</a></li>
-          <li><a href="#">Sign In</a></li>
+          <% if signed_in? %>
+            <li><%= link_to "Sign out", signout_path %></li>
+          <% else %>
+            <li><%= link_to "Sign in", signin_path %></li>
+          <% end %>
         </ul>
       </div>
     </div>

@@ -20,18 +20,15 @@
 <body id="home" data-spy="scroll" data-target="#navbar" data-offset="50">
   <div id="wrapper">
     <%= render "layouts/header" %>
+    <!--
     <%= render "layouts/signup" %>
     <%= render "layouts/contact" %>
+    -->
 
     <%= yield %>
 
     <%= render "layouts/footer" %>
-    <script>
-      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
+    <%= javascript_include_tag "ga" %>
   </div>
 </body>
 </html>

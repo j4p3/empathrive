@@ -1,2 +1,8 @@
-<% provide(:title, 'User Title') %>
-<h1>User Profile</h1>
+<% provide(:title, @user.name) %>
+<div class="row">
+	<aside class="span4 offset2">
+		<section>
+			<h1>Page for <%= @user.name %></h1>
+		</section>
+	</aside>
+</div>
