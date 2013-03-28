@@ -1,0 +1,15 @@
+<li>
+	<strong class="title"><%= experience.title %></strong>
+	<span class="description"><%= experience.description %></span>
+	<span class="timestamp">
+		Posted <%= time_ago_in_words(experience.created_at) %> ago.
+	</span>
+	<% if experience.media_url %>
+		<span class="video">
+			<iframe width="420" height="315" src="http://www.youtube.com/embed/MV_3Dpw-BRY" frameborder="0"></iframe>
+		</span>
+	<% end %>
+	<% if current_user?(experience.user) %>
+		<%= render 'shared/delete_experience',  item_or_post: experience %>
+	<% end %>
+</li>

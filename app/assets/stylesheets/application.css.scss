@@ -142,8 +142,10 @@ border-top-left-radius: 10px;
 #cover-photo {
   h1 {
     color: $orange_bright;
+    text-shadow: $orange_light 1px 1px;
   }
   p, h2 {
     color: $orange_light;
+    text-shadow: $orange_dark 1px 1px;
   }
 }
