@@ -1,4 +1,4 @@
-<%= form_for(@experience) do |f| %>
+<%= form_for current_user.experiences.build do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
 
   <%= f.label :title %>
@@ -10,5 +10,6 @@
   <%= f.label :media_url %>
   <%= f.text_field :media_url, placeholder: "http://www.youtube.com/..." %>
   
+  <br>
   <%= f.submit "Post", class: "btn btn-large btn-primary" %>
 <% end %>

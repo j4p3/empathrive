@@ -2,13 +2,15 @@
 <div class="row">
 	<aside class="span4 offset2">
 		<section>
+			<h3>New Experience</h3>
+			<%= render 'shared/experience_form' %>
+		</section>
+	</aside>
+	<div class="span6">
+		<section>
 			<h1>Page for <%= @user.name %></h1>
 			<p>contact: <%= @user.email %></p>
 		</section>
-		<section>
-		</section>
-	</aside>
-	<div class="span8 offset2">
 		<% if @user.experiences.any? %>
 			<h3>Experiences</h3>
 			<ul>
