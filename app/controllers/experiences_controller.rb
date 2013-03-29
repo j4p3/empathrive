@@ -5,7 +5,7 @@ class ExperiencesController < ApplicationController
 		@experience = current_user.experiences.build(params[:experience])
 		if @experience.save
 			flash[:success] = "Post successful!"
-			redirect_to current_user_path
+			redirect_to root_path
 		end
 	end
 
@@ -15,6 +15,6 @@ class ExperiencesController < ApplicationController
 
 	def destroy
 		@micropost.destroy
-		redirect_to current_user_path
+		redirect_to root_path
 	end
 end
